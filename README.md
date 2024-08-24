@@ -1,6 +1,6 @@
 # Cache Chunker
 
-If you naively trim the oldest messages from context, you'll have to rebuild the cache every message once you hit the context limit. This extension instead trims N messages at a time, so you only have to rebuild the cache every N messages. This won't work in group chats and neither if you use automatic summery creation, as these features cause the beginning of the context to change.
+If you naively trim the oldest messages from context, you'll have to rebuild the cache every message once you hit the context limit. This extension instead trims N messages at a time, so you only have to rebuild the cache every N messages. This won't work in group chats and neither if you use automatic summery creation, as these features cause the beginning of the context to change. You sacrifice being able to include as much messages as possible in the context, to gain improved inference speed. If you're able to run 32k Context length, you can get reasonably get away with only reevaluating the whole context every 15 messages or so, or even less frequently, depending on how much context length you are willing to sacrifice. 
 
 ## Install
 git clone into your extension directory of ST, e.g. "data\default-user\extensions".

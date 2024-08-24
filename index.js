@@ -55,11 +55,11 @@ function getCuttingPoint(chat, maxTokens, chunkSize) {
     }
 
     const indicesToKeep = Math.floor(chat.length * contextPercentageToKeep);
-    const indexToDeleteUpTo = chat.length - indicesToKeep + 1;
+    const indexToDeleteUpTo = chat.length - indicesToKeep;
 
     const chunkedIndexToDeleteUpTo = indexToDeleteUpTo - (indexToDeleteUpTo % chunkSize) + chunkSize;
     console.debug("Cache circa filled: " + indexToDeleteUpTo % chunkSize + ' out of ' + chunkSize)
-    return chunkedIndexToDeleteUpTo;
+    return chunkedIndexToDeleteUpTo + 1;
 }
 
 window['CacheChunker_trimContext'] = trimContext;
