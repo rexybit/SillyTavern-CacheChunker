@@ -5,8 +5,8 @@
     "optional": [],
     "generate_interceptor": "CacheChunker_trimContext",
     "js": "index.js",
-    "author": "Omegastick",
+    "author": "Rexybit",
     "version": "0.1.0",
-    "homePage": "https://github.com/Omegastick/SillyTavern-CacheChunker",
+    "homePage": "https://github.com/rexybit/SillyTavern-CacheChunker",
     "autoUpdate": true
 }
